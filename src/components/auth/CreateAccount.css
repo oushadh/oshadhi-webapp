@@ -1,0 +1,123 @@
+.create-account {
+  padding: 120px 20px 60px;
+  background-color: #F8F5FF;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-account-container {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(149, 117, 230, 0.15);
+  width: 100%;
+  max-width: 450px;
+}
+
+.create-account-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.create-account-header h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.create-account-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.create-account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #9575E6;
+  box-shadow: 0 0 0 2px rgba(149, 117, 230, 0.1);
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #9575E6, #B39DFF);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(149, 117, 230, 0.3);
+}
+
+.create-account-footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+}
+
+.create-account-footer a {
+  color: #9575E6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.create-account-footer a:hover {
+  color: #B39DFF;
+}
+
+@media (max-width: 768px) {
+  .create-account {
+    padding: 100px 20px 40px;
+  }
+
+  .create-account-container {
+    padding: 2rem;
+  }
+
+  .create-account-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .create-account-header p {
+    font-size: 1rem;
+  }
+
+  .form-group input {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-button {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+} 
