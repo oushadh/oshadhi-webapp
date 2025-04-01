@@ -75,7 +75,10 @@ const Plans: React.FC = () => {
                   <li key={featureIndex}>{feature}</li>
                 ))}
               </ul>
-              <Link to="/create-account" className="button button-primary">
+              <Link 
+                to={plan.buttonText === 'Contact Sales' ? '/contact' : '/create-account'} 
+                className="button button-primary"
+              >
                 {plan.buttonText}
               </Link>
             </div>

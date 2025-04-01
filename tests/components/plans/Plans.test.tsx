@@ -67,9 +67,9 @@ describe('Plans Component', () => {
     });
   });
 
-  it('links to create account page for Enterprise plan', () => {
+  it('links to contact page for Enterprise plan', () => {
     renderWithRouter(<Plans />);
     const contactSalesButton = screen.getByText('Contact Sales');
-    expect(contactSalesButton.closest('a')).toHaveAttribute('href', '/create-account');
+    expect(contactSalesButton.closest('a')).toHaveAttribute('href', '/contact');
   });
 }); 
