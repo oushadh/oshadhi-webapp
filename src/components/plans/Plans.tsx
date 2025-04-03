@@ -56,33 +56,47 @@ const Plans: React.FC = () => {
 
   return (
     <div className="plans">
-      <div className="container">
-        <div className="plans-header">
-          <h1>Choose Your Plan</h1>
-          <p className="plans-subtitle">Select the perfect plan for your <span className="company-name">Oshadhi</span> health monitoring needs</p>
+      {/* Fixed Background with Blobs */}
+      <div className="background-container">
+        <div className="plans-background">
+          <div className="plans-blob"></div>
+          <div className="plans-blob"></div>
+          <div className="plans-blob"></div>
         </div>
-        <div className="plans-grid">
-          {plans.map((plan, index) => (
-            <div key={index} className={`plan-card ${plan.popular ? 'popular' : ''}`}>
-              {plan.popular && <div className="popular-badge">Most Popular</div>}
-              <h2>{plan.name}</h2>
-              <div className="price">
-                <span className="amount">{plan.price}</span>
-                <span className="period">{plan.period}</span>
+      </div>
+
+      {/* Scrollable Content */}
+      <div className="content-container">
+        <div className="container">
+          <div className="plans-header">
+            <h1>Choose Your Plan</h1>
+            <p className="plans-subtitle">Select the perfect plan for your <span className="company-name">Oshadhi</span> health monitoring needs</p>
+          </div>
+          <div className="plans-grid">
+            {plans.map((plan, index) => (
+              <div key={index} className={`plan-card ${plan.popular ? 'popular' : ''}`}>
+                {plan.popular && <div className="popular-badge">Most Popular</div>}
+                <div className="plan-card-content">
+                  <h2>{plan.name}</h2>
+                  <div className="price">
+                    <span className="amount">{plan.price}</span>
+                    <span className="period">{plan.period}</span>
+                  </div>
+                  <ul className="features">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex}>{feature}</li>
+                    ))}
+                  </ul>
+                  <Link 
+                    to={plan.buttonText === 'Contact Sales' ? '/contact' : '/create-account'} 
+                    className="button"
+                  >
+                    {plan.buttonText}
+                  </Link>
+                </div>
               </div>
-              <ul className="features">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex}>{feature}</li>
-                ))}
-              </ul>
-              <Link 
-                to={plan.buttonText === 'Contact Sales' ? '/contact' : '/create-account'} 
-                className="button button-primary"
-              >
-                {plan.buttonText}
-              </Link>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

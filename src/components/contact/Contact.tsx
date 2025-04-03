@@ -26,11 +26,18 @@ const Contact: React.FC = () => {
 
   return (
     <div className="contact">
+      <div className="background-container">
+        <div className="contact-blob"></div>
+        <div className="contact-blob"></div>
+        <div className="contact-blob"></div>
+      </div>
+      
       <div className="container">
         <div className="contact-header">
-          <h1>Contact Us</h1>
-          <p>Get in touch with our support team for any assistance</p>
+          <h1>Get in Touch</h1>
+          <p>Have questions? We're here to help you on your health monitoring journey.</p>
         </div>
+
         <div className="contact-container">
           <div className="contact-info">
             <h2>Support Information</h2>
@@ -51,61 +58,69 @@ const Contact: React.FC = () => {
               <p>24/7 for critical issues</p>
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="subject">Subject</label>
-              <select
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-              >
-                <option value="">Select a subject</option>
-                <option value="technical">Technical Support</option>
-                <option value="billing">Billing Issue</option>
-                <option value="account">Account Related</option>
-                <option value="general">General Inquiry</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={5}
-                required
-              />
-            </div>
-            <button type="submit" className="button button-primary">
-              Send Message
-            </button>
-          </form>
+
+          <div className="contact-form">
+            <form onSubmit={handleSubmit}>
+              <div className="form-fields">
+                <div className="form-group">
+                  <label htmlFor="name">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Enter your email address"
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="subject">Subject</label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="technical">Technical Support</option>
+                    <option value="billing">Billing Inquiry</option>
+                    <option value="account">Account Management</option>
+                    <option value="feature">Feature Request</option>
+                    <option value="general">General Question</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="How can we help you?"
+                    rows={5}
+                    required
+                  />
+                </div>
+              </div>
+              <button type="submit" className="submit-button" aria-label="Send Message">
+                <span className="material-symbols-outlined">send</span>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
