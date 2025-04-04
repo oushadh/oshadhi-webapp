@@ -70,7 +70,7 @@ const Plans: React.FC = () => {
         <div className="container">
           <div className="plans-header">
             <h1>Choose Your Plan</h1>
-            <p className="plans-subtitle">Select the perfect plan for your <span className="company-name">Oshadhi</span> health monitoring needs</p>
+            <p className="plans-subtitle">Select the perfect plan for your Oshadhi health monitoring needs</p>
           </div>
           <div className="plans-grid">
             {plans.map((plan, index) => (
@@ -88,7 +88,7 @@ const Plans: React.FC = () => {
                     ))}
                   </ul>
                   <Link 
-                    to={plan.buttonText === 'Contact Sales' ? '/contact' : '/create-account'} 
+                    to={plan.buttonText === 'Contact Sales' ? '/contact' : '/auth?tab=signup'} 
                     className="button"
                   >
                     {plan.buttonText}

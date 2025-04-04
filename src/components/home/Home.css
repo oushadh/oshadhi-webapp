@@ -324,7 +324,9 @@
 
 .testimonials-header h2 {
   font-size: 3.5rem;
+  color: #2C2738;
   margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .testimonials-header p {
